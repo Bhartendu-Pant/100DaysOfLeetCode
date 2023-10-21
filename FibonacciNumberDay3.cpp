@@ -20,5 +20,15 @@ Explanation: F(3) = F(2) + F(1) = 1 + 1 = 2.
 
 */
 
-//solution function :
+//solution function:
+
+ int fib(int n) {
+        //edge cases
+        if(n==0)return 0;
+        if(n==1)return 1;
+
+        //Using recursion higher time complexity
+        int ans = fib(n-1)+fib(n-2);
+        return ans;  
+    }
 
