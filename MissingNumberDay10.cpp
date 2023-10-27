@@ -28,3 +28,15 @@ Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0
         return missingNumber;
         
     }
+
+
+
+// solution 2: TC-O(N)
+
+  int sum=0;
+        int result =(nums.size() * (nums.size() + 1))/2;
+        for(int i=0; i<nums.size();i++){
+            sum += nums[i];
+        }
+
+        return result-sum;
