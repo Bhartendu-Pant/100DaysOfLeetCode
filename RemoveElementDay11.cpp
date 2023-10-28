@@ -36,25 +36,40 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 // solution function:
  int removeElement(vector<int>& nums, int val) {
-    int index=0;
-    int k=0;
-    int i=0;
-    int j=nums.size()-1;
 
-    for( i;i<=j;i++){
-        for( j;j>=i;j--){
-             if(nums[i] != val){  
-                k++;
-                break;
-            }
-
-            if(nums[i]==val && nums[j] != val){
-                nums[i]=nums[j];
-                nums[j]=val;
-                k++;
-                break;
-            } 
+     int index=0;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i] != val){
+            nums[index++]=nums[i];
         }
-    }
-    return k;   
+    } 
+    return index;
+
+
+
+
+
+
+     
+    // int index=0;   
+    // int k=0;
+    // int i=0;
+    // int j=nums.size()-1;
+
+    // for( i;i<=j;i++){
+    //     for( j;j>=i;j--){
+    //          if(nums[i] != val){  
+    //             k++;
+    //             break;
+    //         }
+
+    //         if(nums[i]==val && nums[j] != val){
+    //             nums[i]=nums[j];
+    //             nums[j]=val;
+    //             k++;
+    //             break;
+    //         } 
+    //     }
+    // }
+    // return k;   
     }
