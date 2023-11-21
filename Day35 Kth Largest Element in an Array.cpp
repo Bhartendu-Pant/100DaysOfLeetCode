@@ -24,7 +24,7 @@ Constraints:
 */
 
 //Solution:
-//T.C. O(k)  using min priority queue
+//using min priority queue
  int findKthLargest(vector<int>& nums, int k) {
        //Default priority queue in cpp is max priority queue
        //To make it min priority queue use greater operator
